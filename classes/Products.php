@@ -4,18 +4,19 @@ class Product
 {
     public $name;
     public $price;
-    public Category $category;
+    public $category;
+    public $type;
 
-
-    public function __construct($name, $price, $category)
+    public function __construct($name, $price, $category, $type)
     {
         $this->name = $name;
         $this->price = $price;
-        $this->category  = $category;
+        $this->category = $category;
+        $this->type = $type;
     }
 
-    public function getInfo(): string
+    public function getInfo()
     {
-        return "nome: $this ->  name <br> prezzo: €$this -> price <br> categoria: {$this->category->name}";
+        return "Nome: {$this->name}, Prezzo: €{$this->price}, Categoria: {$this->category->name}, Tipo: {$this->type}";
     }
 }
