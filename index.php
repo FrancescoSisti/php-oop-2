@@ -16,6 +16,7 @@
         <div class="product-card">
             <h3><?= $product->name ?></h3>
             <p><?= $product->getInfo() ?></p>
+            <img src="<?= $product->img ?>" alt="">
         </div>
     <?php } ?>
 
